@@ -157,4 +157,32 @@ while n>0:
 	n = n - 1
 print sum
 
-##http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868193482529754158abf734c00bba97c87f89a263b000
+### dict
+### dict 使用键-值（key-value）存储，具有极快的查找速度，相对的浪费内存。
+### 对于list ， 这是用空间换时间的解决方案
+### dict 的key必须是  不可变对象
+'''
+	如果访问的key不存在，Python会报错
+
+'''
+dic = {'Michael':95 , 'Bob':91 , 'Tracy':89}
+print dic['Michael']
+print dic.get('Thomas')			##不存在的key，返回None
+print dic.get('Thomas' , -1)	##不存在的key，返回自定义的 -1
+dic.pop('Bob')					##删除一个key ， 对应的value也会删除
+
+### set
+### set 与 dict类似，也是一组key组合，但是不存储value。
+s = set([1 , 2 , 3 , 4])
+print s
+
+### 重复的元素在set中会被自动过滤
+s.add(4)
+s.add(5)
+s.add(6)
+### remove(key) 方法可以删除元素
+s.remove(4)
+print s
+s2 = set([4 , 5 , 6, 7 , 8])
+print s & s2				####两个set 的交集
+print s | s2				####两个set 的并集
